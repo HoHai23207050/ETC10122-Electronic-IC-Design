@@ -1,0 +1,35 @@
+name: RTL verification
+
+on:
+  push:
+    paths:
+      - "projects/dual-port-ram/rtl/**"
+      - "projects/dual-port-ram/tb/**"
+      - ".github/workflows/rtl-verification.yml"
+  pull_request:
+    paths:
+      - "projects/dual-port-ram/rtl/**"
+      - "projects/dual-port-ram/tb/**"
+      - ".github/workflows/rtl-verification.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/dual-port-ram
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Icarus Verilog
+        run: sudo apt-get update && sudo apt-get install --yes iverilog
+      - name: Compile and run the self-checking testbench
+        run: |
+          mkdir -p build
+          iverilog -g2012 -Wall -o build/ram_2port_tb \
+            rtl/ram_2port.v tb/ram_2port_tb.v
+          vvp build/ram_2port_tb | tee build/rtl.log
+          grep -F "RESULT: PASS - 12 checks passed." build/rtl.log

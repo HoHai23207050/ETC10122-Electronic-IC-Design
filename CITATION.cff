@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If this coursework repository supports your study, cite the repository and its contributors."
+title: "ETC10122 Electronic Integrated Circuit Design"
+type: software
+version: 1.0.0
+date-released: 2026-08-24
+authors:
+  - family-names: "Lương"
+    given-names: "Hải Long"
+    email: "22207056@student.hcmus.edu.vn"
+  - family-names: "Hồ"
+    given-names: "Trọng Hải"
+  - family-names: "Nguyễn"
+    given-names: "An Khang"
+  - family-names: "Lê Trần"
+    given-names: "Khánh An"
+repository-code: "https://github.com/lhlizdabezt/ETC10122-Electronic-IC-Design"
+url: "https://github.com/lhlizdabezt/ETC10122-Electronic-IC-Design"
+license: MIT

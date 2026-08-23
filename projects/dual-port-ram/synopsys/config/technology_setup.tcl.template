@@ -1,0 +1,56 @@
+# Copy this file to technology_setup.tcl before running Design Compiler or ICC2.
+# Keep this file as the single seam between the portable project and the
+# laboratory PDK. Do not invent physical-library paths; obtain them from the
+# instructor/teaching assistant or the lab's existing ICC2 load.tcl.
+
+# -----------------------------------------------------------------------------
+# Design inputs -- already complete for this project.
+# -----------------------------------------------------------------------------
+set PROJECT_ROOT [file normalize [file join [file dirname [info script]] .. ..]]
+set TOP_MODULE   ram_2port
+set RTL_FILE     [file join $PROJECT_ROOT rtl ram_2port.v]
+set SDC_FILE     [file join $PROJECT_ROOT constraints ram_2port.sdc]
+
+# -----------------------------------------------------------------------------
+# Logical standard-cell library for Design Compiler and Formality.
+# This exact path was recorded in the supplied Lab 2a tutorial trace. Retain it
+# only when 'file readable $TARGET_LIBRARY_FILE' succeeds on the school server.
+# Update it if the laboratory has moved to a different host or directory.
+# -----------------------------------------------------------------------------
+set DB_LIBRARY_DIR      "/home/thehungk19/teaching_assistant/Synopsys_Practice/TH_TKVM_CLC/Digital_Synopsys/Lib/db"
+set TARGET_LIBRARY      "saed32rvt_tt1p05v25c.db"
+set TARGET_LIBRARY_FILE [file join $DB_LIBRARY_DIR $TARGET_LIBRARY]
+
+# Simulation model needed only for post-synthesis VCS simulation. Leave blank
+# until the laboratory gives the actual model location.
+set STANDARD_CELL_VERILOG ""
+
+# -----------------------------------------------------------------------------
+# ICC2 physical technology. These values are intentionally blank: a .db file
+# is sufficient for synthesis but cannot create a physical layout. ICC2 needs
+# matching physical reference libraries (normally .ndm or .mw) and possibly an
+# explicit technology file. Fill them with the exact lab values.
+# -----------------------------------------------------------------------------
+set TECH_FILE      ""
+set REFERENCE_LIBS [list]
+
+# Core-only student implementation controls. This creates a standard-cell
+# implementation of the RTL, not a compiled two-port SRAM macro.
+set CORE_UTILIZATION 0.55
+set CORE_OFFSET      {5 5 5 5}
+set POWER_NET        VDD
+set GROUND_NET       VSS
+set ICC2_OPEN_GUI    1
+
+# P/G and GDS are technology-specific. Point these to the course-provided Tcl
+# adapters after the TA confirms them. They must connect POWER_NET/GROUND_NET,
+# create a valid ring/mesh, and use the correct layer map. Blank is allowed for
+# routed-layout demonstration, but not for power-integrity or signoff claims.
+set ICC2_PG_SCRIPT         ""
+set ICC2_GDS_EXPORT_SCRIPT ""
+
+# Optional DRC/LVS signoff inputs. These are PDK-owned runsets, not generated
+# from Verilog. Their absence correctly prevents a signoff claim.
+set ICV_DRC_RUNSET ""
+set ICV_LVS_RUNSET ""
+set GDS_LAYER_MAP   ""

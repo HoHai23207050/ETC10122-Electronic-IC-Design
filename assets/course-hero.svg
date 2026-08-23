@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">ETC10122 Electronic Integrated Circuit Design</title>
+  <desc id="desc">A restrained technical banner for a dual-port RAM coursework portfolio.</desc>
+  <rect width="1200" height="320" fill="#010102"/>
+  <rect x="44" y="42" width="1112" height="236" rx="18" fill="#0f1011" stroke="#2a2b2f"/>
+  <rect x="68" y="67" width="8" height="186" rx="4" fill="#5e6ad2"/>
+  <text x="104" y="95" fill="#9b9da3" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="2">VNUHCM - UNIVERSITY OF SCIENCE / FACULTY OF ELECTRONICS AND TELECOMMUNICATIONS</text>
+  <text x="104" y="146" fill="#f5f5f6" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700">ETC10122</text>
+  <text x="104" y="188" fill="#c8c9ce" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="600">ELECTRONIC INTEGRATED CIRCUIT DESIGN</text>
+  <text x="104" y="229" fill="#8d8f96" font-family="Inter, Arial, sans-serif" font-size="18">Dual-port RAM / RTL verification / ASIC implementation / Exam and exercise portfolio</text>
+  <rect x="884" y="108" width="116" height="88" rx="12" fill="#17181b" stroke="#34363c"/>
+  <text x="942" y="141" text-anchor="middle" fill="#8d8f96" font-family="Inter, Arial, sans-serif" font-size="13">MEMORY</text>
+  <text x="942" y="176" text-anchor="middle" fill="#f5f5f6" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">16 x 8</text>
+  <rect x="1015" y="108" width="116" height="88" rx="12" fill="#17181b" stroke="#5e6ad2"/>
+  <text x="1073" y="141" text-anchor="middle" fill="#8d8f96" font-family="Inter, Arial, sans-serif" font-size="13">RTL QA</text>
+  <text x="1073" y="176" text-anchor="middle" fill="#f5f5f6" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">12 / 12</text>
+</svg>

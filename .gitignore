@@ -1,0 +1,35 @@
+# EDA outputs
+*.ddc
+*.def
+*.gds
+*.gdsii
+*.log
+*.mr
+*.rpt
+*.sdf
+*.spef
+*.svf
+*.vcd
+*.wlf
+*.fsdb
+*.db
+*.ndm
+
+# Generated build and simulation directories
+build/
+work/
+simv*
+csrc/
+INCA_libs/
+verdiLog/
+
+# Local technology and licensed files
+libraries/
+pdk/
+tech/
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

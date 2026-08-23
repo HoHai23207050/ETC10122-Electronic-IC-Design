@@ -1,0 +1,43 @@
+# Legacy compact Design Compiler starter script for the teacher's SAED32 flow.
+# Use ../synopsys/dc/run_dc.tcl for the complete handoff: it also writes an
+# SVF for Formality and provides the matching ICC2 layout flow.
+# Copy this file into the Synopsys synthesis working directory, then adjust
+# the three paths below to match the laboratory directory layout.
+
+set TOP_MODULE      ram_2port
+set RTL_FILE        ../rtl/ram_2port.v
+set CONSTRAINT_FILE ../constraints/ram_2port.sdc
+
+# The local Lab 2a tutorial uses this standard-cell library name.
+set LIB_DIR         ../Lib/db
+set LIB             saed32rvt_tt1p05v25c.db
+
+set_svf ${TOP_MODULE}.svf
+file mkdir ./work
+file mkdir ./output
+define_design_lib work -path ./work
+
+lappend search_path $LIB_DIR
+set target_library [list $LIB]
+set link_library   [list * $LIB]
+
+analyze -format verilog [list $RTL_FILE]
+elaborate -lib work $TOP_MODULE
+current_design $TOP_MODULE
+link
+check_design
+
+source -echo $CONSTRAINT_FILE
+set_fix_multiple_port_nets -all
+compile_ultra -no_autoungroup
+
+report_area -hierarchy                  > ./output/ram_2port_area.rpt
+report_timing -delay_type max -max_paths 20 > ./output/ram_2port_timing_max.rpt
+report_timing -delay_type min -max_paths 20 > ./output/ram_2port_timing_min.rpt
+report_qor                              > ./output/ram_2port_qor.rpt
+
+set verilogout_equation false
+write_file -format verilog -hierarchy -output ./output/ram_2port_mapped.v
+write_file -format ddc     -hierarchy -output ./output/ram_2port_mapped.ddc
+write_sdc -nosplit ./output/ram_2port_icc2.sdc
+write_sdf ./output/ram_2port_mapped.sdf

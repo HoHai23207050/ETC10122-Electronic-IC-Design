@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" role="img" aria-labelledby="title desc">
+  <title id="title">Dual-port RAM verification sequence</title>
+  <desc id="desc">Three evidence cards pulse in sequence without moving paths or overlapping text.</desc>
+  <rect width="1200" height="230" rx="16" fill="#08090a"/>
+  <g>
+    <rect x="45" y="42" width="340" height="146" rx="14" fill="#111215" stroke="#3a3c43"/>
+    <circle cx="78" cy="74" r="8" fill="#5e6ad2"><animate attributeName="opacity" values="1;0.35;0.35;1" dur="4.8s" repeatCount="indefinite"/></circle>
+    <text x="101" y="81" fill="#f5f5f6" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">RTL VERIFICATION</text>
+    <text x="78" y="122" fill="#c7c8cc" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">12 / 12 PASS</text>
+    <text x="78" y="156" fill="#85878e" font-family="Inter, Arial, sans-serif" font-size="15">Independent ports and READ_FIRST behavior</text>
+  </g>
+  <g>
+    <rect x="430" y="42" width="340" height="146" rx="14" fill="#111215" stroke="#3a3c43"/>
+    <circle cx="463" cy="74" r="8" fill="#5e6ad2"><animate attributeName="opacity" values="0.35;1;0.35;0.35" dur="4.8s" repeatCount="indefinite"/></circle>
+    <text x="486" y="81" fill="#f5f5f6" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">SYNTHESIS</text>
+    <text x="463" y="122" fill="#c7c8cc" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">596 CELLS</text>
+    <text x="463" y="156" fill="#85878e" font-family="Inter, Arial, sans-serif" font-size="15">160 formal compare points passing</text>
+  </g>
+  <g>
+    <rect x="815" y="42" width="340" height="146" rx="14" fill="#111215" stroke="#3a3c43"/>
+    <circle cx="848" cy="74" r="8" fill="#5e6ad2"><animate attributeName="opacity" values="0.35;0.35;1;0.35" dur="4.8s" repeatCount="indefinite"/></circle>
+    <text x="871" y="81" fill="#f5f5f6" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">POST-ROUTE</text>
+    <text x="848" y="122" fill="#c7c8cc" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">TIMING MET</text>
+    <text x="848" y="156" fill="#85878e" font-family="Inter, Arial, sans-serif" font-size="15">Scoped evidence; no tapeout claim</text>
+  </g>
+</svg>
