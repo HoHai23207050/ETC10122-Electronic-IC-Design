@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If this coursework repository supports your study, cite the repository and its contributors."
 title: "ETC10122 Electronic Integrated Circuit Design"
 type: software
-version: 1.0.0
-date-released: 2026-08-24
+version: 1.0.1
+date-released: 2026-08-29
 authors:
   - family-names: "Lương"
     given-names: "Hải Long"

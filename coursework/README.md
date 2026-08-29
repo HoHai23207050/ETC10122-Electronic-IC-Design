@@ -13,3 +13,6 @@ keeps the repository reviewable while preserving stable citations and hashes.
 Lecturer-authored slides and the original examination scan are not
 redistributed. The release provides student-authored work and a source map
 without claiming ownership of the course material.
+
+Use the [latest release](https://github.com/lhlizdabezt/ETC10122-Electronic-IC-Design/releases/latest)
+to download the current asset set and its SHA-256 manifest.

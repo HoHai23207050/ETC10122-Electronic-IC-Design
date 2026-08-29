@@ -34,6 +34,21 @@ contract and monitored by the testbench.
   <img src="assets/course-motion.svg" alt="Dual-port RAM verification sequence" width="100%">
 </div>
 
+## Run the public RTL check
+
+The portable verification does not require the licensed campus PDK or EDA
+tools. From `projects/dual-port-ram`, run the self-checking testbench with
+Icarus Verilog:
+
+```bash
+iverilog -g2012 -Wall -o build/ram_2port_tb rtl/ram_2port.v tb/ram_2port_tb.v
+vvp build/ram_2port_tb
+```
+
+The expected final line is `RESULT: PASS - 12 checks passed.` The full
+tool-flow guide, including the campus-only configuration boundary, is in
+[`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
+
 ## Verified evidence
 
 | Stage | Recorded result | Interpretation |
@@ -87,6 +102,18 @@ history with large binary revisions:
 - source snapshots for reproducibility where redistribution is permitted.
 
 Start with the [latest release](https://github.com/lhlizdabezt/ETC10122-Electronic-IC-Design/releases/latest).
+
+## Practical questions
+
+**Where are the report, presentation, exercises, and worked examination?**
+They are versioned [release assets](https://github.com/lhlizdabezt/ETC10122-Electronic-IC-Design/releases/latest), so the reviewable source repository stays small.
+
+**Why are some course files absent?** Lecturer materials, examination scans,
+licensed EDA data, and other students' work are intentionally excluded. See
+the [publication boundary](docs/COURSE_MAP.md).
+
+**Is this a signoff-clean ASIC?** No. The repository records the successful
+course flow and its limitations, including full-deck DRC and LVS boundaries.
 
 ## Citation and contact
 

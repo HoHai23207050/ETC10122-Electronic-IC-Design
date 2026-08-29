@@ -20,8 +20,9 @@
   not claim full-deck DRC closure.
 - No extracted LVS result was available. Internal connectivity checks and
   Formality are not presented as LVS.
-- Antenna analysis reported zero violations for the analyzed subset but skipped
-  30 nets.
+- Antenna checking reported zero violations only for analyzed nets. Thirty
+  top-level nets were skipped because their pin models lacked gate-area
+  information, so antenna closure is not claimed.
 - The implementation is not represented as tapeout-ready or foundry-qualified.
 - All values are tied to the documented course run and should be regenerated
   if RTL, constraints, libraries, or scripts change.
