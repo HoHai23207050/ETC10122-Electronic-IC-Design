@@ -23,7 +23,7 @@ jobs:
       run:
         working-directory: projects/dual-port-ram
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install Icarus Verilog
         run: sudo apt-get update && sudo apt-get install --yes iverilog
       - name: Compile and run the self-checking testbench
