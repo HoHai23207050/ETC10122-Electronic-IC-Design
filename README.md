@@ -115,13 +115,6 @@ the [publication boundary](docs/COURSE_MAP.md).
 **Is this a signoff-clean ASIC?** No. The repository records the successful
 course flow and its limitations, including full-deck DRC and LVS boundaries.
 
-## Citation and contact
-
-Academic citation metadata is available in [`CITATION.cff`](CITATION.cff).
-Project questions may be sent to
-[22207056@student.hcmus.edu.vn](mailto:22207056@student.hcmus.edu.vn) or
-[Luong Hai Long on LinkedIn](https://www.linkedin.com/in/lhlizdabezt).
-
 ## License
 
 Student-authored source code is available under the [MIT License](LICENSE).
