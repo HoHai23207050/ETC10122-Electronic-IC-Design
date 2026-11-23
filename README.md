@@ -18,7 +18,7 @@ An evidence-backed course portfolio covering dual-port memory design, RTL
 verification, synthesis, formal equivalence, physical implementation, worked
 exercises, and a fully developed solution to the 2020 examination.
 
-**Student:** Lương Hải Long — 22207056
+**Student:** Ho Trong Hai — 23207050
 **Program:** Electronics and Telecommunications
 **Institution:** University of Science, Vietnam National University Ho Chi Minh City
 
